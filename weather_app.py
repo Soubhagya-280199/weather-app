@@ -19,10 +19,10 @@ while(True):
     else:
         #weather = weather_data.json()['weather'][0]['main']
         weather = weather_data.json()['weather'][0]['main']
-        temp = round(weather_data.json()['main']['temp'])
+        temp = (round(weather_data.json()['main']['temp']) -32 )* 5  // 9
         country = weather_data.json()['sys']['country']
-
-        print(f"The weather at {user_input},{country} \n is having temprature {temp} \n weather {weather}")
+        print(round(weather_data.json()['main']['temp']))
+        print(f"The weather at {user_input},{country} \n is having temprature {temp} \n weather {weather} F")
 
     complete = input("Do you want to check another (y/n) :")
 
